@@ -9,6 +9,8 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- header starts here -->
@@ -259,7 +261,7 @@ lover of animals.
                             <h5>FEBRUARY 09, 2020</h5>    
                             <p>Lorem Ipsum available, but the majo
                                 rity have suffered alteration in somewords which look.</p>
-                            <h3 class="read">Read More+</h3>    
+                            <h3 class="read"><a href="">Read More+</a></h3>    
                         </div>
                         <div class="section-seven-card">
                             <img src="./images/7-card-2.png" alt="">
@@ -268,7 +270,7 @@ lover of animals.
                             <h5>FEBRUARY 09, 2020</h5>    
                             <p>Lorem Ipsum available, but the majo
                                 rity have suffered alteration in somewords which look.</p>
-                            <h3 class="read">Read More+</h3>    
+                            <h3 class="read"><a href="">Read More+</a></h3>    
                         </div>
                         <div class="section-seven-card">
                             <img src="./images/7-card-3.png" alt="">
@@ -277,7 +279,7 @@ lover of animals.
                             <h5>FEBRUARY 09, 2020</h5>    
                             <p>Lorem Ipsum available, but the majo
                                 rity have suffered alteration in somewords which look.</p>
-                            <h3 class="read">Read More+</h3>    
+                            <h3 class="read"><a href="">Read More+</a></h3>    
                         </div>
                     </div>    
                 </div>
@@ -328,6 +330,25 @@ lover of animals.
              </div>
        
     </footer>
-    
+    <script>
+        $(document).ready(function(){
+            let x =calcWidth()
+            if(x>1199){
+                $(".main-nav-content").slideDown()
+            }
+            else{
+                $(".main-nav-content").slideUp()
+
+            }
+            $(".toggle").click(function(){
+                $(".main-nav-content").slideToggle()
+            })
+        })
+        function calcWidth(){
+           let docWidth= $(Window).width()
+           console.log(docWidth)
+           return docWidth
+        }
+    </script>
 </body>
 </html>
